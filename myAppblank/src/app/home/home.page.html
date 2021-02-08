@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
       Canopus
     </ion-title>
@@ -8,27 +8,14 @@
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
+    <ion-toolbar color="primary"  >
+      <button class = "button icon ion-navicon"></button>
+      <h1 class = "title">Header Buttons</h1>
       <ion-title size="large">Canopus</ion-title>
+      <button class = "button icon ion-home"></button>
+     
     </ion-toolbar>
   </ion-header>
 
-  <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-      
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-
-  <div id="container">
-    <strong></strong>
-    <p>New User?<a target="_blank" rel="noopener noreferrer" href="assets/icon/Canopus.png">Register Now</a></p>
-  </div>
+ 
 </ion-content>
