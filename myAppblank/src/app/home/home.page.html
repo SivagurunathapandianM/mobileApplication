@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Canopus
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Canopus</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+      
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    <span class="psw">Forgot <a href="#">password?</a></span>
+  </div>
+
+  <div id="container">
+    <strong></strong>
+    <p>New User?<a target="_blank" rel="noopener noreferrer" href="assets/icon/Canopus.png">Register Now</a></p>
+  </div>
+</ion-content>
