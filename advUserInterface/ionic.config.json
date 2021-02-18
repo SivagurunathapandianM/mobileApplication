@@ -1,0 +1,7 @@
+{
+  "name": "advUserInterface",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

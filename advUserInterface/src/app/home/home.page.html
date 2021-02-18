@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary">
+      RiverRipples
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-list-header >
+      <ion-label>Signup</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label  position="floating" placeholder="username">Username</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating" >Password</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label  position="floating">Confirm Password</ion-label>
+      <ion-input type="password" [(ngModel)]="confirmPassword"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        User type
+      </ion-label>
+      <ion-select [(ngModel)]="usertype">
+        <ion-select-option value="user">User</ion-select-option>
+        <ion-select-option value="shopkeeper">Shop Keeper</ion-select-option> 
+        <ion-select-option value="Supplier">Supplier</ion-select-option> 
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+         Gender
+      </ion-label>
+      <ion-select [(ngModel)]="gender">
+        <ion-select-option value="user">Male</ion-select-option>
+        <ion-select-option value="user">Female</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-checkbox slot="start" checked="true" [(ngModel)]="checkbox"></ion-checkbox>
+      <ion-label>Send Notification</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" expand="block"  (click)="login()">Login</ion-button> 
+      </ion-col>
+    
+      <ion-col>
+        <ion-button color="primary" expand="block" fill="outline" (click)="cancel()">Cancel</ion-button> 
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="block" fill="outline" (click)="alert()">alert</ion-button> 
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="block" fill="outline" (click)="toast()">toast</ion-button> 
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" expand="block" fill="outline" (click)="actionController()">actioncontroller</ion-button> 
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="navigate()">Move to test page</ion-button>
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+ 
+</ion-content>

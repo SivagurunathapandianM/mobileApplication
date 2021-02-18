@@ -52,3 +52,8 @@ button {
 button:hover {
   opacity: 0.8;
 }
+
+
+ion-header {
+  --min-height: auto;
+}

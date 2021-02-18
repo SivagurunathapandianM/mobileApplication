@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>signup</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>
+      User type
+    </ion-label>
+    <ion-select [(ngModel)]="usertype">
+      <ion-select-option value="user">User</ion-select-option>
+      <ion-select-option value="shopkeeper">Shop Keeper</ion-select-option> 
+      <ion-select-option value="Supplier">Supplier</ion-select-option> 
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+       Gender
+    </ion-label>
+    <ion-select [(ngModel)]="gender">
+      <ion-select-option value="user">Male</ion-select-option>
+      <ion-select-option value="user">Female</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-button (click)="start()">submit</ion-button>
+
+
+</ion-content>
