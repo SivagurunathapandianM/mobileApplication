@@ -5,6 +5,13 @@
 </ion-header>
 
 <ion-content>
+  <h4>
+    {{data.hero}}
+  </h4>
+  <ion-item>
+    <ion-label  color="secondary" position="floating" placeholder="username">Username</ion-label>
+    <ion-input color="secondary" type="text" [(ngModel)]="username"></ion-input>
+  </ion-item>
   <ion-item>
     <ion-label>
       User type

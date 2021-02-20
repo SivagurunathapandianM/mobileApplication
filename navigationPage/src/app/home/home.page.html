@@ -1,8 +1,9 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+  <ion-toolbar  color="secondary" >
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false" (click)="presentPopover($event)"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>RiverRipples</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,8 +13,8 @@
       <ion-label>Signup</ion-label>
     </ion-list-header>
     <ion-item>
-      <ion-label  position="floating" placeholder="username">Username</ion-label>
-      <ion-input type="text" [(ngModel)]="username"></ion-input>
+      <ion-label  color="secondary" position="floating" placeholder="username">Username</ion-label>
+      <ion-input color="secondary" type="text" [(ngModel)]="username"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label  position="floating" >Password</ion-label>
@@ -26,6 +27,7 @@
   </ion-list>
 
   <ion-button (click)="start()">Sign Up!</ion-button>
+  <ion-button (click)="openModal()">modal</ion-button>
   
 
 </ion-content>

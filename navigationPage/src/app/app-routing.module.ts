@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'signup',
     loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   },
+  {
+    path: 'modal',
+    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
+  },
+  {
+    path: 'popover',
+    loadChildren: () => import('./popover/popover.module').then( m => m.PopoverPageModule)
+  },
 ];
 
 @NgModule({
