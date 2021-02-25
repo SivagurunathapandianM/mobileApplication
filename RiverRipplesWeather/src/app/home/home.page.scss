@@ -1,0 +1,73 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+/* background color for header*/
+.header-background-color{
+  --background: #1cb1d6;
+}
+
+/* Text color for title*/
+.title-text-color{
+  --background: #ffffff;
+}
+
+/* Size of the search box*/
+#home-search {
+  width: 90%;
+  margin: auto;
+}
+
+
+
+img{
+  width:100%;
+  height:100%;
+}
+
+.myCard{
+  position:relative;
+  background:  #1cb1d6;
+
+}
+
+.myOverlay{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    z-index: 99;
+    bottom: 0px;
+    opacity: 0.5;
+    background: #000;
+    color:#1cb1d6;
+
+}
+
+
+// ion-content.background{
+//   --background: url(../../assets/background/background-image.jpg) center center / cover;
+// }

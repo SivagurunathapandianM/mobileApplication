@@ -1,0 +1,7 @@
+{
+  "name": "RiverRipplesWeather",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

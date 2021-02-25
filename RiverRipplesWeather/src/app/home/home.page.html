@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar  class="header-background-color">
+    <ion-title color="light">
+      RiverRipplesWeather
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false" (click)="presentPopover($event)"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" > 
+  <ion-card class="myCard">  
+    <ion-searchbar id="home-search" placeholder="City Name" [(ngModel)]="cityName" (keyup.enter)="getWeatherdata()"></ion-searchbar>
+  </ion-card>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class=""> 
+          <ion-label color="primary">TEMPERATURE</ion-label> 
+          <ion-img style="width: 80px; height: 80px;" src="assets/weatherimage/temperature.PNG"></ion-img>
+          {{weatherInfo.main.temp}} °c
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class=""> 
+          <ion-label color="primary">HUMIDITY</ion-label> 
+          <ion-img style="width: 80px; height: 80px;" src="assets/weatherimage/Humidity.PNG"></ion-img>
+          {{weatherInfo.main.humidity}} %
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="">
+            <ion-label color="primary">WIND</ion-label>  
+            <ion-img style="width: 80px; height: 80px;" src="assets/weatherimage/wind.PNG"></ion-img>
+             {{weatherInfo.wind.speed}} km/h
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card class="">  
+          <ion-label color="primary">PRESSURE</ion-label>  
+          <ion-img style="width: 80px; height: 80px;" src="assets/weatherimage/Pressure.PNG"></ion-img>
+          {{weatherInfo.main.pressure}}
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+    <!-- fab placed in the bottom to share the app in social media-->
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button>
+        <ion-icon name="share-social-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button><ion-icon name="logo-facebook"></ion-icon></ion-fab-button>
+        <ion-fab-button><ion-icon name="logo-instagram"></ion-icon></ion-fab-button>
+        <ion-fab-button><ion-icon name="logo-twitter"></ion-icon></ion-fab-button>
+        <ion-fab-button><ion-icon name="logo-whatsapp"></ion-icon></ion-fab-button>
+      </ion-fab-list>
+    </ion-fab>
+
+
+</ion-content>
