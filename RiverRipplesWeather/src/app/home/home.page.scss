@@ -67,7 +67,38 @@ img{
 
 }
 
+.backBtn{
+  position: absolute;
+  left: 20vw;
+  top: 40vh;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  border: none;
+  background: red;
+}
 
+.nextBtn{
+  position: absolute;
+  right: 20vw;
+  top: 40vh;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  border: none;
+  background: green;
+}
+
+.forecastslide{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.weatherParameter {
+  text-align: left;
+}
 // ion-content.background{
 //   --background: url(../../assets/background/background-image.jpg) center center / cover;
 // }
