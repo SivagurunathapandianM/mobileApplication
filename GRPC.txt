@@ -1,0 +1,43 @@
+Okay so I think you are missing an important point regarding zb-control
+that does not authenticate, the only thing that service is doing is translating rest calls to grpc calls
+The API which we "provide" which is used by all the workers / zbctl / zb-control etc. is not REST and it is not hosted by 
+zb-control
+It is a GRPC api provided by the CGW (Custom GateWay), that is the API that is authenticated and authorized and
+ so the CGW is the one doing the authentication and the authorization
+
+
+How it works: GRPC messages are sent via HTTP2 framing, so they have a header which can be read by CGW.
+
+For authentication: CGW looks for two values in the HTTP2 header of the GRPC message: password and clientId it reads 
+them from the header and check whether the client and the password are valid and if yes then it lets through the call.
+
+For authorization: it has a db which contains what clients can do what and it decides if the given call can be done by 
+the given client (identified by clientId from the HTTP2 header) can be done or not, if it can it lets through,
+ if it can not it rejects (And you get the unauthorized error).
+
+for this reason you won't find find any other auth related stuff in zb-control it just:
+ 1) gets a REST call with REST auth header
+ 2) converts it into a grpc call, puts the auth related stuffs in the grpc call's header (clientid and password)
+ 3) sends the grpc call to the CGW
+
+
+
+We have a gateway provided by zeebe but it is not "built in" that is also a separate microservice
+but answering the question we have two gateways, the cgw and the zeebe gw
+
+so the flow is:
+either:
+client --REST--> zb-control --gRPC--> CGW --gRPC--> ZBGW --?--> ZB Broker
+or:
+
+zbctl/worker/etc. --gRPC--> CGW --gRPC--> ZBGW --?--> ZB Broker
+
+
+
+    
+do you mean:
+
+What does the Base worker do in this operation?
+
+I wrote the cgw it is in the platform repo
+zeebe-gw is written by camunda it comes with the broker (but as a separate service)
